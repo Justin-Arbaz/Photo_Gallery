@@ -1,0 +1,74 @@
+const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            zoomable: true,
+            closeButton: true
+        });
+
+        document.getElementById('filterForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const textValue = document.getElementById('textFilter').value.toLowerCase();
+            const dateValue = document.getElementById('dateFilter').value;
+
+            const cards = document.querySelectorAll('.gallery-cards');
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                const date = card.getAttribute('data-date');
+
+                const matchesText = textValue === '' || title.includes(textValue);
+                const matchesDate = dateValue === '' || date === dateValue;
+
+                card.style.display = (matchesText && matchesDate) ? 'block' : 'none';
+            });
+        });
+
+        // Pagination Script
+        const itemsPerPage = 4;
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const paginationContainer = document.getElementById('pagination');
+        const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+
+        function showPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            galleryItems.forEach((item, index) => {
+                item.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+
+            // Update pagination UI
+            paginationContainer.innerHTML = '';
+
+            // Prev Button
+            const prev = document.createElement('li');
+            prev.className = `page-item ${page === 1 ? 'disabled' : ''}`;
+            prev.innerHTML = `<a class="page-link">Previous</a>`;
+            prev.onclick = () => {
+                if (page > 1) showPage(page - 1);
+            };
+            paginationContainer.appendChild(prev);
+
+            // Page Numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement('li');
+                li.className = `page-item ${i === page ? 'active' : ''}`;
+                li.innerHTML = `<a class="page-link">${i}</a>`;
+                li.onclick = () => showPage(i);
+                paginationContainer.appendChild(li);
+            }
+
+            // Next Button
+            const next = document.createElement('li');
+            next.className = `page-item ${page === totalPages ? 'disabled' : ''}`;
+            next.innerHTML = `<a class="page-link">Next</a>`;
+            next.onclick = () => {
+                if (page < totalPages) showPage(page + 1);
+            };
+            paginationContainer.appendChild(next);
+        }
+
+        // Initialize
+        showPage(1);
