@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Bootstrap Gallery with Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -49,42 +50,62 @@
         <!-- Image Grid -->
         <div class="row">
           <!-- Repeat this block for each image -->
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="bg-white rounded-4 p-2 text-center my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+            <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+              <!-- Date Badge -->
+              <span class="date-badge">30-05-2025</span>
               <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
-                data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal"
-                alt="Image 1" class="w-100 rounded-4 img-fluid" style="height: 325px; object-fit: cover;">
-              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal" alt="Image 1"
+                class="w-100 rounded-4 img-fluid">
+              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup -
+                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
             </div>
           </div>
 
           <!-- Duplicate the above block for more images (2, 3, 4 shown below) -->
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="bg-white rounded-4 p-2 text-center my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+            <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+              <span class="date-badge">20-05-2025</span>
               <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
-                data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal"
-                alt="Image 2" class="w-100 rounded-4 img-fluid" style="height: 325px; object-fit: cover;">
-              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal" alt="Image 2"
+                class="w-100 rounded-4 img-fluid">
+              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup -
+                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="bg-white rounded-4 p-2 text-center my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+            <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+              <span class="date-badge">30-05-2025</span>
               <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
-                data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal"
-                alt="Image 3" class="w-100 rounded-4 img-fluid" style="height: 325px; object-fit: cover;">
-              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
+                class="w-100 rounded-4 img-fluid">
+              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup -
+                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="bg-white rounded-4 p-2 text-center my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+            <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+              <span class="date-badge">10-05-2025</span>
               <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
-                data-bs-target="#galleryModal" data-bs-slide-to="3" data-bs-toggle="modal"
-                alt="Image 4" class="w-100 rounded-4 img-fluid" style="height: 325px; object-fit: cover;">
-              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                data-bs-target="#galleryModal" data-bs-slide-to="3" data-bs-toggle="modal" alt="Image 4"
+                class="w-100 rounded-4 img-fluid">
+              <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup -
+                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
             </div>
           </div>
+
+
+          <!-- Pagination -->
+          <div class="col-md-12">
+            <div class="pagination-container mt-4">
+              <nav>
+                <ul class="pagination justify-content-center" id="pagination"></ul>
+              </nav>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -102,7 +123,8 @@
                 <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
                   class="d-block w-100 img-fluid" alt="Image 1">
                 <div class="carousel-caption">
-                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual
+                    Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
                 </div>
               </div>
               <!-- Slide 2 -->
@@ -110,7 +132,8 @@
                 <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
                   class="d-block w-100 img-fluid" alt="Image 2">
                 <div class="carousel-caption">
-                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual
+                    Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
                 </div>
               </div>
               <!-- Slide 3 -->
@@ -118,7 +141,8 @@
                 <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
                   class="d-block w-100 img-fluid" alt="Image 3">
                 <div class="carousel-caption">
-                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual
+                    Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
                 </div>
               </div>
               <!-- Slide 4 -->
@@ -126,7 +150,8 @@
                 <img src="https://lg.delhi.gov.in/sites/default/files/media-gallery/1_356.jpg"
                   class="d-block w-100 img-fluid" alt="Image 4">
                 <div class="carousel-caption">
-                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
+                  <p>Hon’ble Lt. Governor presided over the prize distribution ceremony for the LG Cup - the 25th Annual
+                    Golf Tournament organized by Delhi Development Authority at the Qutab Golf Course.</p>
                 </div>
               </div>
             </div>
@@ -156,6 +181,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
