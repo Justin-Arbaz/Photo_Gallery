@@ -204,4 +204,26 @@ body {
   background: rgba(255, 255, 255, 0.7);
 }
 
+@media (max-width: 576px) {
+  .slider-controls {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .slider-controls .left-buttons,
+  .slider-controls .right-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .carousel-caption {
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+}
+
+
 
