@@ -1,194 +1,195 @@
+/* =====================
+   GENERAL STYLES
+===================== */
 body {
-            background: #FEF2F2;
-        }
-
-        .sidebar h6 {
-            background-color: #5EA403;
-            color: #fff;
-        }
-
-        .sidebar ul li a {
-            display: block;
-            color: #111;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .sidebar ul li:hover {
-            color: #fff;
-        }
-
-        .sidebar ul li:active,
-        li:hover {
-            background-color: #5EA403;
-        }
-
-        .sidebar ul li a:active {
-            color: #fff;
-        }
-
-        .list-group-item {
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-
-        .list-group-item:hover a {
-            color: #fff !important;
-        }
-
-        .list-group-item:hover {
-            background-color: #508904 !important;
-        }
-
-
-        .gallery-img {
-            width: 100%;
-            height: 325px;
-            object-fit: cover;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-
-
-
-        .gallery-title {
-            margin-top: 6px;
-            font-weight: 500;
-        }
-
-
-        .gslide-title {
-    position: absolute; /* Change from absolute */
-    bottom: 10px;
-    left: auto;
-    width: 100%;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
-    color: #111;
-    box-sizing: border-box;
-    border-top: 1px solid #ddd;
+  background-color: #FEF2F2;
 }
 
-        .glightbox-mobile .goverlay {
-    background: #000000e3;
+/* =====================
+   SIDEBAR STYLES
+===================== */
+.sidebar h6 {
+  background-color: #5EA403;
+  color: #fff;
 }
 
-.glightbox-clean .gdesc-inner {
-    padding: 15px 20px;
-    background: #fff;
+.sidebar ul li a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
 }
 
+.sidebar ul li:hover {
+  color: #fff;
+}
+
+.sidebar ul li:active,
+.sidebar ul li:hover {
+  background-color: transparent !important;
+}
+
+.sidebar ul li a:active {
+  color: #fff;
+}
+
+.list-group-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.list-group-item:hover a {
+  color: #fff !important;
+}
+
+.list-group-item:hover {
+  background-color: #508904 !important;
+}
+
+/* =====================
+   FILTER SECTION
+===================== */
+.filter-box {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  position: absolute;
+  top: -14px;
+  left: 0px;
+  background-color: #5EA403;
+  color: white;
+  padding: 5px 17px;
+  border-radius: 4px 4px 0 0;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background-color: #5EA403;
+  color: white;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background-color: #69ae0e;
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive Filter */
 @media (max-width: 768px) {
-    .gslide-title {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    .glightbox-mobile .gslide-title {
-        background: rgba(255, 255, 255, 0.9);
-    }
+  .filter-box form .col-md-5,
+  .filter-box form .col-md-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
+/* =====================
+   GALLERY STYLES
+===================== */
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding: 5px 5px 0px 5px;
+  background: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
+.gallery p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
 
-        .gslide-inner-content {
-            margin: 50px;
-        }
+.gallery-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+}
 
-        .glightbox-clean .gdesc-inner {
-            padding: 0px;
-        }
+.gallery-box img {
+  border-radius: 20px;
+  height: 200px;
+  object-fit: cover;
+}
 
-        .gallery-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 10px;
-            position: relative;
-        }
+.gallery-img {
+  width: 100%;
+  height: 325px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
 
-        .gallery-card img:hover {
-            transform: scale(1.01);
-            transition: transform 0.3s ease;
-        }
+.gallery-title {
+  margin-top: 6px;
+  font-weight: 500;
+}
 
-        .filter-box {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background: #fff;
-            padding: 20px;
-            position: relative;
-            margin-bottom: 20px;
-        }
+.gallery-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
 
-        .filter-label {
-            position: absolute;
-            top: -14px;
-            left: 0px;
-            background-color: #5EA403;
-            color: white;
-            padding: 5px 17px;
-            border-radius: 4px 4px 0 0;
-            font-weight: 600;
-        }
+.gallery-card img:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
 
-        .submit-btn {
-            background-color: #5EA403;
-            color: white;
-            font-weight: 600;
-        }
+/* =====================
+   MODAL & SLIDER STYLES
+===================== */
+.modal-content {
+  background: #fff;
+  padding: 10px 10px 0px 10px;
+  border-radius: 10px;
+}
 
-        .submit-btn:hover {
-            background-color: #69ae0e;
-            color: white;
-            font-weight: 600;
-        }
+.slider-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  z-index: 10;
+}
 
-        .date-badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #c24444;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            font-weight: 500;
-            z-index: 1;
-        }
+.slider-controls .left-buttons button,
+.slider-controls .right-buttons button {
+  border: none;
+  background: #fff;
+  padding: 0px;
+  border-radius: 4px;
+}
 
-        .gslide-image img.zoomable {
-            position: relative;
-            padding: 10px;
-            background: #fff;
-        }
+.carousel-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  width: 100%;
+  padding: 14px 6px;
+  color: #535353;
+  background: rgba(255, 255, 255, 0.7);
+}
 
-        .glightbox-clean .gslide-title {
-            margin: 0px;
-        }
-
-
-        .pagination-container {
-            text-align: center;
-            margin-top: 30px;
-            background: none;
-        }
-
-        .page-link {
-            cursor: pointer;
-            color: #111;
-            /* border-radius: 0px !important; */
-        }
-
-        .active>.page-link {
-            color: #fff;
-            background: #5EA403;
-            border: none;
-
-        }
-
-        .sidebar ul li:active,
-        li:hover {
-            background-color: transparent !important;
-        }
+/* Responsive Slider Controls */
+@media (max-width: 576px) {
+  .slider-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
