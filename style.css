@@ -208,16 +208,19 @@ body {
   .slider-controls .left-buttons,
   .slider-controls .right-buttons {
     width: 100%;
-    display: flex;
-    justify-content: center;
     gap: 10px;
   }
+
+.slider-controls .right-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
 
   .carousel-caption {
     font-size: 14px;
     padding: 10px 5px;
   }
-}
+
 
 
 
