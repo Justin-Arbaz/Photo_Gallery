@@ -86,3 +86,14 @@ document.querySelectorAll('.carousel .carousel-item img').forEach(img => {
     }
   });
 });
+
+
+const modal = document.getElementById('galleryModal');
+
+modal.addEventListener('hidden.bs.modal', () => {
+  const iframes = modal.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    const src = iframe.src;
+    iframe.src = src; // Reset src to stop video
+  });
+});
