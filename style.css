@@ -84,6 +84,7 @@ body {
 
 /* Responsive Filter */
 @media (max-width: 768px) {
+
   .filter-box form .col-md-5,
   .filter-box form .col-md-2 {
     flex: 0 0 100%;
@@ -205,22 +206,16 @@ body {
 }
 
 
-  .slider-controls .left-buttons,
-  .slider-controls .right-buttons {
-    width: 100%;
-    gap: 10px;
-  }
-
+.slider-controls .left-buttons,
+.slider-controls .right-buttons {
+  width: 100%;
+  gap: 10px;
+}
 .slider-controls .right-buttons {
   display: flex;
   justify-content: flex-end;
 }
-
-  .carousel-caption {
-    font-size: 14px;
-    padding: 10px 5px;
-  }
-
-
-
-
+.carousel-caption {
+  font-size: 14px;
+  padding: 10px 5px;
+}
