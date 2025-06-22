@@ -175,6 +175,18 @@ body {
   border-radius: 10px;
 }
 
+
+@media (max-width: 576px) {
+
+.carousel-item img,
+.carousel-item iframe,
+.carousel-item video {
+  width: 100%;
+  height: 287px;
+  object-fit: cover;
+}
+}
+
 .slider-controls {
   position: absolute;
   bottom: 0;
