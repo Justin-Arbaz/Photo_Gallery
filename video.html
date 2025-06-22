@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-4">
+        <div class="row g-3 gallery">
+            <!-- Sidebar -->
+            <div class="col-sm-12 col-md-3">
+                <div class="sidebar">
+                    <h6 class="m-0 p-2 rounded-top">
+                        <strong class="ps-2">Navigation</strong>
+                    </h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Press Releases</a></li>
+                        <li class="list-group-item"><a href="./index.html">Image Gallery</a></li>
+                        <li class="list-group-item"><a href="#">Swachh Delhi</a></li>
+                        <li class="list-group-item"><a href="video.html">Videos</a></li>
+                        <li class="list-group-item"><a href="#">Messages</a></li>
+                        <li class="list-group-item rounded-bottom"><a href="#">Speeches</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-sm-12 col-md-9">
+                <!-- Filter Box -->
+                <div class="filter-box">
+                    <span class="filter-label">Filter</span>
+                    <form id="filterForm" class="row g-2 align-items-center mt-3">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" id="textFilter" placeholder="Search by title...">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="date" class="form-control" id="dateFilter">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn submit-btn w-100">Apply</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="row">
+                    <!-- Repeat this block for each image -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+                        <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+                            <!-- Date Badge -->
+                            <span class="date-badge">30-05-2025</span>
+                            <img src="https://i.ytimg.com/vi/dGKPHsX3G-0/maxresdefault.jpg"
+                                data-bs-target="#galleryModal" data-bs-slide-to="0" data-bs-toggle="modal" alt="Image 1"
+                                class="w-100 rounded-4 img-fluid">
+                            <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for
+                                the LG Cup -
+                                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab
+                                Golf Course.</p>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate the above block for more images (2, 3, 4 shown below) -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+                        <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+                            <span class="date-badge">20-05-2025</span>
+                            <img src="https://i.ytimg.com/vi/dGKPHsX3G-0/maxresdefault.jpg"
+                                data-bs-target="#galleryModal" data-bs-slide-to="1" data-bs-toggle="modal" alt="Image 2"
+                                class="w-100 rounded-4 img-fluid">
+                            <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for
+                                the LG Cup -
+                                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab
+                                Golf Course.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+                        <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+                            <span class="date-badge">30-05-2025</span>
+                            <img src="https://i.ytimg.com/vi/dGKPHsX3G-0/maxresdefault.jpg"
+                                data-bs-target="#galleryModal" data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
+                                class="w-100 rounded-4 img-fluid">
+                            <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for
+                                the LG Cup -
+                                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab
+                                Golf Course.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 gallery-item gallery-cards">
+                        <div class="gallery-card bg-white rounded-4 p-2 text-center my-3">
+                            <span class="date-badge">10-05-2025</span>
+                            <img src="https://i.ytimg.com/vi/dGKPHsX3G-0/maxresdefault.jpg"
+                                data-bs-target="#galleryModal" data-bs-slide-to="3" data-bs-toggle="modal" alt="Image 4"
+                                class="w-100 rounded-4 img-fluid">
+                            <p class="mt-1 mb-0">Hon’ble Lt. Governor presided over the prize distribution ceremony for
+                                the LG Cup -
+                                the 25th Annual Golf Tournament organized by Delhi Development Authority at the Qutab
+                                Golf Course.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Pagination -->
+                    <div class="col-md-12">
+                        <div class="pagination-container mt-4">
+                            <nav>
+                                <ul class="pagination justify-content-center" id="pagination"></ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal with YouTube Carousel -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i5i6MQpNjDE?si=Cx1DSAV_ENmBsIc9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 1 Description: Prize distribution at Qutab Golf Course.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i9LtqnLSZqI?si=yi24lmy9rmUYt6eF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 2 Description: Governor addressing the public event.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/d-9uXmpsFQs?si=HlL8OdiFTDH6JabB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 3 Description: Inauguration ceremony highlights.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                   <iframe width="560" height="315" src="https://www.youtube.com/embed/g-VkmdwjT4s?si=A1DuYiNUozU6gjnd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 4 Description: Hon’ble LG's speech on Swachh Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <div class="left-buttons">
+                                <button data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                                    <img src="./icon/icons8-back-arrow-25.png" alt="Previous">
+                                </button>
+                                <button data-bs-target="#galleryCarousel" data-bs-slide="next">
+                                    <img src="./icon/icons8-right-arrow-25.png" alt="Next">
+                                </button>
+                            </div>
+                            <div class="right-buttons">
+                                <button data-bs-dismiss="modal">
+                                    <img src="./icon/icons8-close-25.png" alt="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
