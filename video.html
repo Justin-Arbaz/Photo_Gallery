@@ -7,27 +7,85 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
     <div class="container py-4">
         <div class="row g-3 gallery">
             <!-- Sidebar -->
-            <div class="col-sm-12 col-md-3">
-                <div class="sidebar">
-                    <h6 class="m-0 p-2 rounded-top">
-                        <strong class="ps-2">Navigation</strong>
-                    </h6>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#">Press Releases</a></li>
-                        <li class="list-group-item"><a href="./index.html">Image Gallery</a></li>
-                        <li class="list-group-item"><a href="#">Swachh Delhi</a></li>
-                        <li class="list-group-item"><a href="video.html">Videos</a></li>
-                        <li class="list-group-item"><a href="#">Messages</a></li>
-                        <li class="list-group-item rounded-bottom"><a href="#">Speeches</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="col-sm-12 col-md-3">
+        <div class="sidebar">
+          <h6 class="m-0 p-2 rounded-top">
+            <strong class="ps-2">Navigation</strong>
+          </h6>
+          <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu1" role="button">
+                <i class="fas fa-newspaper me-2"></i>Press Releases
+              </a>
+              <ul class="collapse ps-4" id="submenu1">
+                <li><a href="#">2023</a></li>
+                <li><a href="#">2024</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu2" role="button">
+                <i class="fas fa-image me-2"></i>Image Gallery
+              </a>
+              <ul class="collapse ps-4" id="submenu2">
+                <li><a href="./pages/Event.html">Events</a></li>
+                <li><a href="#">Programs</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu3" role="button">
+                <i class="fas fa-broom me-2"></i>Swachh Delhi
+              </a>
+              <ul class="collapse ps-4" id="submenu3">
+                <li><a href="#">Campaigns</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu4" role="button">
+                <i class="fas fa-video me-2"></i>Videos
+              </a>
+              <ul class="collapse ps-4" id="submenu4">
+                <li><a href="./video.html">Interviews</a></li>
+                <li><a href="#">Documentaries</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu5" role="button">
+                <i class="fas fa-envelope-open-text me-2"></i>Messages
+              </a>
+              <ul class="collapse ps-4" id="submenu5">
+                <li><a href="#">CM</a></li>
+                <li><a href="#">Deputy CM</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item rounded-bottom">
+              <a data-bs-toggle="collapse" href="#submenu6" role="button">
+                <i class="fas fa-microphone me-2"></i>Speeches
+              </a>
+              <ul class="collapse ps-4" id="submenu6">
+                <li><a href="#">Public</a></li>
+                <li><a href="#">Official</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
 
             <!-- Main Content -->
             <div class="col-sm-12 col-md-9">
@@ -280,17 +338,17 @@
                         <div class="slider-controls">
                             <div class="left-buttons">
                                 <button data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                                    <img src="./icon/icons8-back-arrow-25.png" alt="Previous">
+                                    <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
                                 </button>
                                 <button data-bs-target="#galleryCarousel" data-bs-slide="next">
-                                    <img src="./icon/icons8-right-arrow-25.png" alt="Next">
+                                    <img src="../icon/icons8-right-arrow-25.png" alt="Next">
                                 </button>
                                 <span id="slide-counter">1 out of 4</span>
 
                             </div>
                             <div class="right-buttons">
                                 <button data-bs-dismiss="modal">
-                                    <img src="./icon/icons8-close-25.png" alt="Close">
+                                    <img src="../icon/icons8-close-25.png" alt="Close">
                                 </button>
                             </div>
                         </div>
