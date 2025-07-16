@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="container py-4">
+    <div class="row g-3 gallery">
+
+      <!-- Sidebar -->
+      <div class="col-sm-12 col-md-3">
+        <div class="sidebar">
+          <h6 class="m-0 p-2 rounded-top">
+            <strong class="ps-2">Navigation</strong>
+          </h6>
+          <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu1" role="button">
+                <i class="fas fa-newspaper me-2"></i>Press Releases
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu1">
+                <li><a href="#">2023</a></li>
+                <li><a href="#">2024</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu2" role="button">
+                <i class="fas fa-image me-2"></i>Image Gallery
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu2">
+                <li><a href="../pest-gallery.html">Pest Gallery</a></li>
+                <li><a href="../disease-gallery.html">Disease Gallery</a></li>
+
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu3" role="button">
+                <i class="fas fa-broom me-2"></i>Swachh Delhi
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu3">
+                <li><a href="#">Campaigns</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu4" role="button">
+                <i class="fas fa-video me-2"></i>Videos
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu4">
+                <li><a href="../video.html">Interviews</a></li>
+                <li><a href="#">Documentaries</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item">
+              <a data-bs-toggle="collapse" href="#submenu5" role="button">
+                <i class="fas fa-envelope-open-text me-2"></i>Messages
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu5">
+                <li><a href="#">CM</a></li>
+                <li><a href="#">Deputy CM</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item rounded-bottom">
+              <a data-bs-toggle="collapse" href="#submenu6" role="button">
+                <i class="fas fa-microphone me-2"></i>Speeches
+              </a>
+              <ul class="collapse ps-4 submenu" id="submenu6">
+                <li><a href="#">Public</a></li>
+                <li><a href="#">Official</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Main Content -->
+      <div class="col-sm-12 col-md-9">
+
+        <!-- Filter Box -->
+        <div class="filter-box position-relative">
+          <span class="filter-label">Filter</span>
+          <form id="filterForm" class="row g-3 mt-3">
+
+            <div class="col-12 col-md-5 position-relative">
+              <label for="textFilter" class="form-label">Keyword</label>
+              <input type="text" class="form-control" id="textFilter" placeholder="" />
+            </div>
+
+            <div class="col-12 col-md-5 position-relative ">
+              <label for="dateFilter" class="form-label">Date</label>
+              <input type="date" class="form-control" id="dateFilter" />
+            </div>
+
+            <div class="col-12 col-md-2 d-flex align-items-end">
+              <button type="submit" class="btn submit-btn w-100">Apply</button>
+            </div>
+
+          </form>
+        </div>
+
+
+
+       <div class="row gallery">
+
+  <!-- Card 1 -->
+  <div class="col-sm-12 col-md-6 col-lg-4 gallery-item pest-cards">
+  <a href="./borer-pest.html" class="text-decoration-none">
+    <div class="pest-card rounded-4 p-2 text-center my-3">
+      <img src="../../images/diesease management/fungal/imgi_3_1743241979.png" class="w-100 rounded-4 img-fluid" alt="Image 1">
+      <p class="pest-label">Red rot</p>
+    </div>
+  </a>
+</div>
+
+
+  <!-- Card 2 -->
+  <div class="col-sm-12 col-md-6 col-lg-4 gallery-item pest-cards">
+    <div class="pest-card rounded-4 p-2 text-center my-3">
+      <img src="../../images/diesease management/fungal/imgi_4_1743243898.png" class="w-100 rounded-4 img-fluid" alt="Image 2">
+      <p class="pest-label">Wilt</p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="col-sm-12 col-md-6 col-lg-4 gallery-item pest-cards">
+    <div class="pest-card rounded-4 p-2 text-center my-3">
+      <img src="../../images/diesease management/fungal/imgi_5_1743246819.png" class="w-100 rounded-4 img-fluid" alt="Image 3">
+      <p class="pest-label">Smut</p>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="col-sm-12 col-md-6 col-lg-4 gallery-item pest-cards">
+    <div class="pest-card rounded-4 p-2 text-center my-3">
+      <img src="../../images/diesease management/fungal/imgi_6_1743247729.png" class="w-100 rounded-4 img-fluid" alt="Image 4">
+      <p class="pest-label">Sett Rot</p>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="col-sm-12 col-md-6 col-lg-4 gallery-item pest-cards">
+    <div class="pest-card rounded-4 p-2 text-center my-3">
+      <img src="../../images/diesease management/fungal/imgi_7_1743249780.png" class="w-100 rounded-4 img-fluid" alt="Image 5">
+      <p class="pest-label">Pokkah Boeng</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+          <!-- Pagination -->
+          <div class="col-md-12">
+            <div class="pagination-container mt-4">
+              <nav>
+                <ul class="pagination justify-content-center" id="pagination"></ul>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../script.js"></script>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 // =======================
 // Pagination
 // =======================
-const itemsPerPage = 4;
+const itemsPerPage = 6;
 const galleryItems = document.querySelectorAll('.gallery-item');
 const paginationContainer = document.getElementById('pagination');
 const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
