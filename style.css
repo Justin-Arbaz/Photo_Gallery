@@ -5,7 +5,6 @@ body {
   background-color: #FEF2F2;
 }
 
-
 /* =====================
    SIDEBAR STYLES
 ===================== */
@@ -22,7 +21,7 @@ body {
   display: block;
   color: #111;
   text-decoration: none;
-   font-weight: 500;
+  font-weight: 500;
   font-size: 14px;
 }
 
@@ -51,10 +50,6 @@ body {
 .list-group-flush > .list-group-item:hover {
   background-color: #c04a4aac !important;
 }
-
-
-
-
 
 /* =====================
    FILTER SECTION
@@ -124,7 +119,6 @@ body {
   }
 }
 
-
 /* =====================
    GALLERY STYLES
 ===================== */
@@ -152,23 +146,31 @@ body {
   transition: transform 0.3s ease;
 }
 
-.date-badge {
+.gallery-card .date-badge {
+  width: 30%;
   position: absolute;
-  top: 11px;
+  margin-top: 4px;
+  /* top: 11px; */
   left: 12px;
   background-color: #c04a4aba;
   color: #fff;
-  padding: 3px 7px;
+  /* padding: 3px 7px; */
   font-size: 0.85rem;
   font-weight: bold;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 12px 0px 0px 0px;
   z-index: 10;
 }
 
 .gallery p {
-  font-size: 14px;
-  margin-bottom: 0;
-   font-weight: 500;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b3e51;
+  background: #f0f4f8;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 100%;
 }
 
 .gallery-box {
@@ -198,13 +200,12 @@ body {
 }
 
 /* Pest-gallery page css section */
-
 .pest-card {
   position: relative;
   overflow: hidden;
   background: #ffffff;
   border-radius: 16px;
-  padding: 15px;
+  padding: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -215,7 +216,8 @@ body {
 }
 
 .pest-label {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin: 0px;
   font-size: 15px;
   font-weight: 600;
   color: #2b3e51;
@@ -224,10 +226,11 @@ body {
   border-radius: 8px;
   display: inline-block;
 }
+
 .pest-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 12px;
 }
 
@@ -235,10 +238,17 @@ body {
    MODAL & SLIDER STYLES
 ===================== */
 .modal-content {
+
   background: #fff;
   padding: 10px 10px 0 10px;
   border-radius: 10px;
 }
+
+.modal-dialog.modal-xl {
+  /* max-width: 95%; */
+  width: 100%;
+}
+
 
 .carousel-caption {
   position: absolute;
@@ -251,6 +261,7 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 14px;
+  z-index: 5;
 }
 
 .carousel-item:hover .carousel-caption {
@@ -267,47 +278,62 @@ body {
   align-items: center;
   padding: 8px 10px;
   z-index: 10;
+  flex-wrap: wrap;
 }
 
 .slider-controls .left-buttons,
 .slider-controls .right-buttons {
-  width: 100%;
+  display: flex;
+  align-items: center;
   gap: 10px;
+  flex: 1;
 }
 
 .slider-controls .right-buttons {
-  display: flex;
   justify-content: flex-end;
 }
 
-.slider-controls .left-buttons button,
-.slider-controls .right-buttons button {
+.slider-controls button {
   border: none;
-  background: #fff;
+  background: transparent;
   padding: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 
+.slider-controls span {
+  font-size: 14px;
+  color: #666;
+}
 
-#galleryModal .carousel-item img {
-  height: 600px; /* Set desired height */
-  object-fit: cover; /* Ensures image fills the space without distortion */
+/* Corrected selector */
+#galleryModal1 .carousel-item img,
+#galleryModal2 .carousel-item img,
+#galleryModal3 .carousel-item img,
+#galleryModal4 .carousel-item img,
+#galleryModal5 .carousel-item img {
+  height: 600px;
+  object-fit: fill;
   width: 100%;
 }
 
-
 /* Responsive Modal */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .modal-dialog.modal-xl {
+    max-width: 100%;
+    margin: 0;
+  }
+
   .carousel-item {
-    aspect-ratio: auto;
-    height: 287px;
+    height: auto;
   }
 
   .carousel-item img,
   .carousel-item iframe,
   .carousel-item video {
     width: 100%;
-    height: 287px !important;
+    height: auto !important;
+    max-height: 80vh;
     object-fit: cover;
   }
 
@@ -317,39 +343,43 @@ body {
   }
 }
 
-
-/* =====================
-   ZOOM IMAGE OVERLAY
-===================== */
+/* Zoom Overlay */
 .zoom-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1055;
+  justify-content: center;
+  z-index: 9999;
+}
+.zoom-overlay img{
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+
 }
 
-.zoom-overlay img {
-  max-width: 90vw;
-  max-height: 90vh;
+.zoom-overlay .zoomed-img {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
 }
 
 .zoom-overlay .close-zoom {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 30px;
-  color: #fff;
-  background: transparent;
+  font-size: 2rem;
+  color: white;
+  background: none;
   border: none;
   cursor: pointer;
 }
-
 
 /* =====================
    PAGINATION

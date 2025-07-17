@@ -4,7 +4,6 @@
 const itemsPerPage = 6;
 const galleryItems = document.querySelectorAll('.gallery-item');
 const paginationContainer = document.getElementById('pagination');
-const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
 
 function showPage(page) {
   const start = (page - 1) * itemsPerPage;
@@ -14,135 +13,115 @@ function showPage(page) {
     item.style.display = (index >= start && index < end) ? 'block' : 'none';
   });
 
-  // Rebuild pagination
+  // Build pagination dynamically
+  const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
   paginationContainer.innerHTML = '';
 
-  // Page 1
-  const page1 = document.createElement('li');
-  page1.className = `page-item ${page === 1 ? 'active' : ''}`;
-  page1.innerHTML = `<a class="page-link">1</a>`;
-  page1.onclick = () => showPage(1);
-  paginationContainer.appendChild(page1);
-
-  // Page 2 (if exists)
-  if (totalPages >= 2) {
-    const page2 = document.createElement('li');
-    page2.className = `page-item ${page === 2 ? 'active' : ''}`;
-    page2.innerHTML = `<a class="page-link">2</a>`;
-    page2.onclick = () => showPage(2);
-    paginationContainer.appendChild(page2);
+  for (let i = 1; i <= totalPages; i++) {
+    const li = document.createElement('li');
+    li.className = `page-item ${page === i ? 'active' : ''}`;
+    li.innerHTML = `<a class="page-link">${i}</a>`;
+    li.onclick = () => showPage(i);
+    paginationContainer.appendChild(li);
   }
 
-  // Ellipsis
-  if (totalPages > 3) {
-    const ellipsis = document.createElement('li');
-    ellipsis.className = 'page-item disabled';
-    ellipsis.innerHTML = `<a class="page-link">...</a>`;
-    paginationContainer.appendChild(ellipsis);
+  if (totalPages > 1) {
+    const next = document.createElement('li');
+    next.className = `page-item ${page === totalPages ? 'disabled' : ''}`;
+    next.innerHTML = `<a class="page-link">&raquo;</a>`;
+    next.onclick = () => { if (page < totalPages) showPage(page + 1); };
+    paginationContainer.appendChild(next);
   }
-
-  // Next (»)
-  const next = document.createElement('li');
-  next.className = `page-item ${page === totalPages ? 'disabled' : ''}`;
-  next.innerHTML = `<a class="page-link">&raquo;</a>`;
-  next.onclick = () => { if (page < totalPages) showPage(page + 1); };
-  paginationContainer.appendChild(next);
-
-  // Last (»)
-  const last = document.createElement('li');
-  last.className = `page-item ${page === totalPages ? 'active' : ''}`;
-  last.innerHTML = `<a class="page-link">Last &raquo;</a>`;
-  last.onclick = () => showPage(totalPages);
-  paginationContainer.appendChild(last);
 }
 
-// Init pagination
 showPage(1);
-
 
 // =======================
 // Filter Functionality
 // =======================
 document.getElementById('filterForm').addEventListener('submit', function (e) {
   e.preventDefault();
-
   const textValue = document.getElementById('textFilter').value.toLowerCase();
   const dateValue = document.getElementById('dateFilter').value;
-  const cards = document.querySelectorAll('.gallery-cards');
+  const cards = document.querySelectorAll('.gallery-item');
 
+  let visibleCount = 0;
   cards.forEach(card => {
-    const title = card.getAttribute('data-title').toLowerCase();
-    const date = card.getAttribute('data-date');
+    const title = card.getAttribute('data-title')?.toLowerCase() || '';
+    const date = card.getAttribute('data-date') || '';
     const matchesText = textValue === '' || title.includes(textValue);
     const matchesDate = dateValue === '' || date === dateValue;
-
-    card.style.display = (matchesText && matchesDate) ? 'block' : 'none';
+    const visible = matchesText && matchesDate;
+    card.style.display = visible ? 'block' : 'none';
+    if (visible) visibleCount++;
   });
+
+  // Update pagination after filtering
+  showPage(1);
 });
 
-
 // =======================
-// Zoom Image on Click
+// Zoom functionality
 // =======================
-document.querySelectorAll('#galleryCarousel .carousel-item img').forEach(img => {
+document.querySelectorAll('.carousel-item img').forEach(img => {
   img.style.cursor = 'zoom-in';
-
-  img.addEventListener('click', function () {
-    const src = img.getAttribute('src');
-
+  img.addEventListener('click', () => {
     const overlay = document.createElement('div');
     overlay.className = 'zoom-overlay';
     overlay.innerHTML = `
       <button class="close-zoom">&times;</button>
-      <img src="${src}" alt="Zoomed Image">
-    `;
+      <img src="${img.src}" alt="Zoomed Image">`;
     document.body.appendChild(overlay);
-
     overlay.querySelector('.close-zoom').onclick = () => overlay.remove();
-    overlay.onclick = (e) => {
-      if (e.target === overlay) overlay.remove();
-    };
+    overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
   });
 });
 
 
 // =======================
-// Carousel Counter
+// Carousel Counter Handler
 // =======================
-const carousel = document.getElementById('galleryCarousel');
-const counter = document.getElementById('slide-counter');
-const items = carousel.querySelectorAll('.carousel-item');
-const total = items.length;
+function initCarouselCounter(carouselId, counterId) {
+  const carousel = document.getElementById(carouselId);
+  const counter = document.getElementById(counterId);
+  const items = carousel.querySelectorAll('.carousel-item');
+  const total = items.length;
 
-const updateCounter = () => {
-  const activeIndex = [...items].findIndex(item => item.classList.contains('active'));
-  counter.textContent = `${activeIndex + 1} out of ${total}`;
-};
+  const updateCounter = () => {
+    const activeIndex = [...items].findIndex(item => item.classList.contains('active'));
+    counter.textContent = `${activeIndex + 1} out of ${total}`;
+  };
 
-carousel.addEventListener('slid.bs.carousel', updateCounter);
-window.addEventListener('load', updateCounter);
+  carousel.addEventListener('slid.bs.carousel', updateCounter);
+  window.addEventListener('load', updateCounter);
+}
 
+initCarouselCounter("galleryCarousel1", "slide-counter1");
+initCarouselCounter("galleryCarousel2", "slide-counter2");
+initCarouselCounter("galleryCarousel3", "slide-counter3");
+initCarouselCounter("galleryCarousel4", "slide-counter4");
+initCarouselCounter("galleryCarousel5", "slide-counter5");
 
 // =======================
-// Stop Videos on Modal Close
-// =======================
-const modal = document.getElementById('galleryModal');
-
-modal.addEventListener('hidden.bs.modal', () => {
-  const iframes = modal.querySelectorAll('iframe');
-  iframes.forEach(iframe => {
-    const src = iframe.src;
-    iframe.src = src; // Reset src to stop video
+// Stop Videos on Modal Close (for ALL modals)
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('hidden.bs.modal', () => {
+    const iframes = modal.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+      const src = iframe.src;
+      iframe.src = src; // Reset to stop video
+    });
   });
 });
-
 
 // =======================
 // Thumbnail Click → Carousel Slide
-// =======================
 document.querySelectorAll('.gallery-item img').forEach((img, index) => {
   img.addEventListener('click', () => {
-    const carousel = bootstrap.Carousel.getOrCreateInstance(document.querySelector('#galleryCarousel'));
-    carousel.to(index);
+    const carouselEl = document.querySelector('#galleryCarousel');
+    if (carouselEl) {
+      const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+      carousel.to(index);
+    }
   });
 });
