@@ -150,11 +150,11 @@ body {
   width: 30%;
   position: absolute;
   margin-top: 4px;
-  /* top: 11px; */
+  top: 9px;
   left: 12px;
   background-color: #c04a4aba;
   color: #fff;
-  /* padding: 3px 7px; */
+  padding: 3px 7px;
   font-size: 0.85rem;
   font-weight: bold;
   border-radius: 12px 0px 0px 0px;
