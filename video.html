@@ -131,7 +131,7 @@
 
                             <!-- Thumbnail with play icon -->
                             <div class="position-relative">
-                                <img src="./images/video-gallery1.jpg" data-bs-target="#galleryModal"
+                                <img src="./images/video-gallery1.jpg" data-bs-target="#galleryModal1"
                                     data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
                                     class="w-100 rounded-4 img-fluid">
                                 <span class="position-absolute top-50 start-50 translate-middle bg-white p-0">
@@ -166,7 +166,7 @@
 
                             <!-- Thumbnail with play icon -->
                             <div class="position-relative">
-                                <img src="./images/video-gallery2.jpg" data-bs-target="#galleryModal"
+                                <img src="./images/video-gallery2.jpg" data-bs-target="#galleryModal2"
                                     data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
                                     class="w-100 rounded-4 img-fluid">
                                 <span class="position-absolute top-50 start-50 translate-middle bg-white p-0">
@@ -201,7 +201,7 @@
 
                             <!-- Thumbnail with play icon -->
                             <div class="position-relative">
-                                <img src="./images/video-gallery3.jpg" data-bs-target="#galleryModal"
+                                <img src="./images/video-gallery3.jpg" data-bs-target="#galleryModal3"
                                     data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
                                     class="w-100 rounded-4 img-fluid">
                                 <span class="position-absolute top-50 start-50 translate-middle bg-white p-0">
@@ -238,7 +238,7 @@
 
                             <!-- Thumbnail with play icon -->
                             <div class="position-relative">
-                                <img src="./images/video-gallery4.jpg" data-bs-target="#galleryModal"
+                                <img src="./images/video-gallery4.jpg" data-bs-target="#galleryModal4"
                                     data-bs-slide-to="2" data-bs-toggle="modal" alt="Image 3"
                                     class="w-100 rounded-4 img-fluid">
                                 <span class="position-absolute top-50 start-50 translate-middle bg-white p-0">
@@ -272,11 +272,11 @@
     </div>
 
     <!-- Modal with YouTube Carousel -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="galleryModal1" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body p-0">
-                    <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
+                    <div id="galleryCarousel1" class="carousel slide" data-bs-ride="false">
                         <div class="carousel-inner">
                             <!-- Slide 1 -->
                             <div class="carousel-item active">
@@ -338,13 +338,365 @@
                         <!-- Slider Controls -->
                         <div class="slider-controls">
                             <div class="left-buttons">
-                                <button data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                                <button data-bs-target="#galleryCarousel1" data-bs-slide="prev">
                                     <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
                                 </button>
-                                <button data-bs-target="#galleryCarousel" data-bs-slide="next">
+                                <button data-bs-target="#galleryCarousel1" data-bs-slide="next">
                                     <img src="../icon/icons8-right-arrow-25.png" alt="Next">
                                 </button>
-                                <span id="slide-counter">1 out of 4</span>
+                                <span id="slide-counter1">1 out of 4</span>
+
+                            </div>
+                            <div class="right-buttons">
+                                <button data-bs-dismiss="modal">
+                                    <img src="../icon/icons8-close-25.png" alt="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal with YouTube Carousel -->
+    <div class="modal fade" id="galleryModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div id="galleryCarousel2" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/Bgm3koEmrs4?si=cZwNCCxOe2fLXSSD"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 1 Description: Prize distribution at Qutab Golf Course.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/i9LtqnLSZqI?si=yi24lmy9rmUYt6eF"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 2 Description: Governor addressing the public event.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/rwugdk2QG8I?si=ThM_a0GfciSiV4NY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 3 Description: Inauguration ceremony highlights.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/H2FYx57vmWc?si=jRAwT612wbaVb_FM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 4 Description: Hon’ble LG's speech on Swachh Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <div class="left-buttons">
+                                <button data-bs-target="#galleryCarousel2" data-bs-slide="prev">
+                                    <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
+                                </button>
+                                <button data-bs-target="#galleryCarousel2" data-bs-slide="next">
+                                    <img src="../icon/icons8-right-arrow-25.png" alt="Next">
+                                </button>
+                                <span id="slide-counter2">1 out of 4</span>
+
+                            </div>
+                            <div class="right-buttons">
+                                <button data-bs-dismiss="modal">
+                                    <img src="../icon/icons8-close-25.png" alt="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal with YouTube Carousel -->
+    <div class="modal fade" id="galleryModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div id="galleryCarousel3" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/Bgm3koEmrs4?si=cZwNCCxOe2fLXSSD"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 1 Description: Prize distribution at Qutab Golf Course.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/i9LtqnLSZqI?si=yi24lmy9rmUYt6eF"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 2 Description: Governor addressing the public event.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/rwugdk2QG8I?si=ThM_a0GfciSiV4NY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 3 Description: Inauguration ceremony highlights.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/H2FYx57vmWc?si=jRAwT612wbaVb_FM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 4 Description: Hon’ble LG's speech on Swachh Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <div class="left-buttons">
+                                <button data-bs-target="#galleryCarousel3" data-bs-slide="prev">
+                                    <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
+                                </button>
+                                <button data-bs-target="#galleryCarousel3" data-bs-slide="next">
+                                    <img src="../icon/icons8-right-arrow-25.png" alt="Next">
+                                </button>
+                                <span id="slide-counter3">1 out of 4</span>
+
+                            </div>
+                            <div class="right-buttons">
+                                <button data-bs-dismiss="modal">
+                                    <img src="../icon/icons8-close-25.png" alt="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal with YouTube Carousel -->
+    <div class="modal fade" id="galleryModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div id="galleryCarousel4" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/Bgm3koEmrs4?si=cZwNCCxOe2fLXSSD"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 1 Description: Prize distribution at Qutab Golf Course.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/i9LtqnLSZqI?si=yi24lmy9rmUYt6eF"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 2 Description: Governor addressing the public event.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/rwugdk2QG8I?si=ThM_a0GfciSiV4NY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 3 Description: Inauguration ceremony highlights.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/H2FYx57vmWc?si=jRAwT612wbaVb_FM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 4 Description: Hon’ble LG's speech on Swachh Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <div class="left-buttons">
+                                <button data-bs-target="#galleryCarousel4" data-bs-slide="prev">
+                                    <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
+                                </button>
+                                <button data-bs-target="#galleryCarousel4" data-bs-slide="next">
+                                    <img src="../icon/icons8-right-arrow-25.png" alt="Next">
+                                </button>
+                                <span id="slide-counter4">1 out of 4</span>
+
+                            </div>
+                            <div class="right-buttons">
+                                <button data-bs-dismiss="modal">
+                                    <img src="../icon/icons8-close-25.png" alt="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal with YouTube Carousel -->
+    <div class="modal fade" id="galleryModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div id="galleryCarousel5" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/Bgm3koEmrs4?si=cZwNCCxOe2fLXSSD"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 1 Description: Prize distribution at Qutab Golf Course.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/i9LtqnLSZqI?si=yi24lmy9rmUYt6eF"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 2 Description: Governor addressing the public event.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/rwugdk2QG8I?si=ThM_a0GfciSiV4NY"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 3 Description: Inauguration ceremony highlights.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="ratio ratio-16x9">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/H2FYx57vmWc?si=jRAwT612wbaVb_FM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-caption">
+                                    <p>Video 4 Description: Hon’ble LG's speech on Swachh Delhi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="slider-controls">
+                            <div class="left-buttons">
+                                <button data-bs-target="#galleryCarousel5" data-bs-slide="prev">
+                                    <img src="../icon/icons8-back-arrow-25.png" alt="Previous">
+                                </button>
+                                <button data-bs-target="#galleryCarousel5" data-bs-slide="next">
+                                    <img src="../icon/icons8-right-arrow-25.png" alt="Next">
+                                </button>
+                                <span id="slide-counter5">1 out of 4</span>
 
                             </div>
                             <div class="right-buttons">
